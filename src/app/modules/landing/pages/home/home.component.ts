@@ -1,4 +1,4 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { CarouselComponent, ContactUsComponent, LocationMapComponent } from '@modules/landing/components';
 import { ICarouselItem } from '@modules/landing/components/carousel/interfaces';
 import { SharedModule } from '@shared/shared.module';
