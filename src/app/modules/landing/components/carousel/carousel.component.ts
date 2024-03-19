@@ -1,16 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ICarouselItem } from '@modules/landing/components/carousel/interfaces';
 import { SharedModule } from '@shared/shared.module';
-import {
-  Observable,
-  Subject,
-  interval,
-  takeUntil,
-  timeInterval,
-  timer,
-} from 'rxjs';
-import { take, tap } from 'lodash';
+import { Subject, interval, takeUntil, timeInterval } from 'rxjs';
 
 @Component({
   selector: 'app-carousel',
