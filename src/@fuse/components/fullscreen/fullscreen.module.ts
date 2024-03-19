@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [FuseFullscreenComponent],
   imports: [MatButtonModule, MatIconModule, MatTooltipModule, CommonModule],
-  exports: [FuseFullscreenComponent]
+  exports: [FuseFullscreenComponent],
 })
 export class FuseFullscreenModule {}

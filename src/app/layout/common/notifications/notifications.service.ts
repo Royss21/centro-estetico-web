@@ -4,7 +4,7 @@ import { map, Observable, ReplaySubject, switchMap, take, tap } from 'rxjs';
 import { Notification } from '@layout/common/notifications/notifications.types';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NotificationsService {
   private _notifications: ReplaySubject<Notification[]> = new ReplaySubject<
@@ -81,7 +81,7 @@ export class NotificationsService {
         this._httpClient
           .patch<Notification>('api/common/notifications', {
             id,
-            notification
+            notification,
           })
           .pipe(
             map((updatedNotification: Notification) => {

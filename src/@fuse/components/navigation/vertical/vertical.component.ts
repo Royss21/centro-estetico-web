@@ -18,13 +18,13 @@ import {
   SimpleChanges,
   ViewChild,
   ViewChildren,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import {
   animate,
   AnimationBuilder,
   AnimationPlayer,
-  style
+  style,
 } from '@angular/animations';
 import { DOCUMENT } from '@angular/common';
 import { NavigationEnd, Router } from '@angular/router';
@@ -36,14 +36,14 @@ import {
   ReplaySubject,
   Subject,
   Subscription,
-  takeUntil
+  takeUntil,
 } from 'rxjs';
 import { fuseAnimations } from '@fuse/animations';
 import {
   FuseNavigationItem,
   FuseVerticalNavigationAppearance,
   FuseVerticalNavigationMode,
-  FuseVerticalNavigationPosition
+  FuseVerticalNavigationPosition,
 } from '@fuse/components/navigation/navigation.types';
 import { FuseNavigationService } from '@fuse/components/navigation/navigation.service';
 import { FuseScrollbarDirective } from '@fuse/directives/scrollbar/scrollbar.directive';
@@ -57,7 +57,7 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
   animations: fuseAnimations,
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  exportAs: 'fuseVerticalNavigation'
+  exportAs: 'fuseVerticalNavigation',
 })
 export class FuseVerticalNavigationComponent
   implements OnChanges, OnInit, AfterViewInit, OnDestroy
@@ -148,7 +148,7 @@ export class FuseVerticalNavigationComponent
       'fuse-vertical-navigation-mode-side': this.mode === 'side',
       'fuse-vertical-navigation-opened': this.opened,
       'fuse-vertical-navigation-position-left': this.position === 'left',
-      'fuse-vertical-navigation-position-right': this.position === 'right'
+      'fuse-vertical-navigation-position-right': this.position === 'right',
     };
     /* eslint-enable @typescript-eslint/naming-convention */
   }
@@ -158,7 +158,7 @@ export class FuseVerticalNavigationComponent
    */
   @HostBinding('style') get styleList(): any {
     return {
-      visibility: this.opened ? 'visible' : 'hidden'
+      visibility: this.opened ? 'visible' : 'hidden',
     };
   }
 
@@ -379,7 +379,7 @@ export class FuseVerticalNavigationComponent
     });
     this._mutationObserver.observe(this._document.documentElement, {
       attributes: true,
-      attributeFilter: ['class']
+      attributeFilter: ['class'],
     });
 
     setTimeout(() => {
@@ -602,7 +602,10 @@ export class FuseVerticalNavigationComponent
     // Create the enter animation and attach it to the player
     this._player = this._animationBuilder
       .build([
-        animate('300ms cubic-bezier(0.25, 0.8, 0.25, 1)', style({ opacity: 1 }))
+        animate(
+          '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
+          style({ opacity: 1 })
+        ),
       ])
       .create(this._overlay);
 
@@ -624,7 +627,10 @@ export class FuseVerticalNavigationComponent
     // Create the leave animation and attach it to the player
     this._player = this._animationBuilder
       .build([
-        animate('300ms cubic-bezier(0.25, 0.8, 0.25, 1)', style({ opacity: 0 }))
+        animate(
+          '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
+          style({ opacity: 0 })
+        ),
       ])
       .create(this._overlay);
 
@@ -672,7 +678,10 @@ export class FuseVerticalNavigationComponent
     // Create the enter animation and attach it to the player
     this._player = this._animationBuilder
       .build([
-        animate('300ms cubic-bezier(0.25, 0.8, 0.25, 1)', style({ opacity: 1 }))
+        animate(
+          '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
+          style({ opacity: 1 })
+        ),
       ])
       .create(this._asideOverlay);
 
@@ -694,7 +703,10 @@ export class FuseVerticalNavigationComponent
     // Create the leave animation and attach it to the player
     this._player = this._animationBuilder
       .build([
-        animate('300ms cubic-bezier(0.25, 0.8, 0.25, 1)', style({ opacity: 0 }))
+        animate(
+          '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
+          style({ opacity: 0 })
+        ),
       ])
       .create(this._asideOverlay);
 

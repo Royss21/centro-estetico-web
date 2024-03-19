@@ -42,7 +42,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatProgressBarModule,
     MatPaginatorModule,
     MatRippleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
   ],
   exports: [
     MatButtonModule,
@@ -63,7 +63,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatProgressBarModule,
     MatPaginatorModule,
     MatRippleModule,
-    MatProgressSpinnerModule
-  ]
+    MatProgressSpinnerModule,
+  ],
 })
 export class SharedMaterialModule {}

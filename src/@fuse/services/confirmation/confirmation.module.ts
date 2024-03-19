@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [FuseConfirmationDialogComponent],
   imports: [MatButtonModule, MatDialogModule, MatIconModule, CommonModule],
-  providers: [FuseConfirmationService]
+  providers: [FuseConfirmationService],
 })
 export class FuseConfirmationModule {
   /**

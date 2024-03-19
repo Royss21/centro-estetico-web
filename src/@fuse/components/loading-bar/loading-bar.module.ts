@@ -6,6 +6,6 @@ import { FuseLoadingBarComponent } from '@fuse/components/loading-bar/loading-ba
 @NgModule({
   declarations: [FuseLoadingBarComponent],
   imports: [CommonModule, MatProgressBarModule],
-  exports: [FuseLoadingBarComponent]
+  exports: [FuseLoadingBarComponent],
 })
 export class FuseLoadingBarModule {}

@@ -7,8 +7,6 @@ import { SharedModule } from '@shared/shared.module';
   standalone: true,
   imports: [SharedModule],
   templateUrl: './error404.component.html',
-  styleUrls: ['./error404.component.scss']
+  styleUrls: ['./error404.component.scss'],
 })
-export class Error404Component {
-
-}
+export class Error404Component {}

@@ -18,9 +18,9 @@ import { FuseConfirmationConfig } from '@fuse/services/confirmation/confirmation
           }
         }
       }
-    `
+    `,
   ],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class FuseConfirmationDialogComponent {
   /**

@@ -5,11 +5,11 @@ import {
   Input,
   OnDestroy,
   OnInit,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BooleanInput } from '@angular/cdk/coercion';
-import { Subject, of, takeUntil } from 'rxjs';
+import { Subject, of } from 'rxjs';
 import { User } from '@core/user/user.types';
 import { UserService } from '@core/user/user.service';
 import { MatButtonModule } from '@angular/material/button';
@@ -30,8 +30,8 @@ import { SharedModule } from '@shared/shared.module';
     MatDividerModule,
     MatIconModule,
     MatMenuModule,
-    SharedModule
-  ]
+    SharedModule,
+  ],
 })
 export class UserComponent implements OnInit, OnDestroy {
   /* eslint-disable @typescript-eslint/naming-convention */
@@ -41,7 +41,7 @@ export class UserComponent implements OnInit, OnDestroy {
   @Input() showAvatar: boolean = true;
   user: User;
 
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<boolean> = new Subject<boolean>();
 
   /**
    * Constructor
@@ -70,16 +70,16 @@ export class UserComponent implements OnInit, OnDestroy {
     //     this._changeDetectorRef.markForCheck();
     //   });
 
-    var user: User = {
+    const user: User = {
       id: 'cfaad35d-07a3-4447-a6c3-d8c3d54fd5df',
       name: 'Brian Hughes',
       email: 'hughes.brian@company.com',
       avatar: 'assets/images/avatars/brian-hughes.jpg',
-      status: 'online'
+      status: 'online',
     };
 
     of(user).subscribe((user: User) => {
-      console.log('user', user)
+      console.log('user', user);
       this.user = user;
       this._changeDetectorRef.markForCheck();
     });
@@ -111,7 +111,7 @@ export class UserComponent implements OnInit, OnDestroy {
     this._userService
       .update({
         ...this.user,
-        status
+        status,
       })
       .subscribe();
   }

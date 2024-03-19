@@ -1,7 +1,7 @@
 import {
   IsActiveMatchOptions,
   Params,
-  QueryParamsHandling
+  QueryParamsHandling,
 } from '@angular/router';
 
 export interface FuseNavigationItem {

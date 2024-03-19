@@ -4,7 +4,7 @@ import {
   Input,
   OnChanges,
   SimpleChanges,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 import { fuseAnimations } from '@fuse/animations';
@@ -16,7 +16,7 @@ import { FuseCardFace } from '@fuse/components/card/card.types';
   styleUrls: ['./card.component.scss'],
   encapsulation: ViewEncapsulation.None,
   animations: fuseAnimations,
-  exportAs: 'fuseCard'
+  exportAs: 'fuseCard',
 })
 export class FuseCardComponent implements OnChanges {
   /* eslint-disable @typescript-eslint/naming-convention */
@@ -46,7 +46,7 @@ export class FuseCardComponent implements OnChanges {
       'fuse-card-expanded': this.expanded,
       'fuse-card-face-back': this.flippable && this.face === 'back',
       'fuse-card-face-front': this.flippable && this.face === 'front',
-      'fuse-card-flippable': this.flippable
+      'fuse-card-flippable': this.flippable,
     };
     /* eslint-enable @typescript-eslint/naming-convention */
   }

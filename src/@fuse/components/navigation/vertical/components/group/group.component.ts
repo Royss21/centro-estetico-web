@@ -4,7 +4,7 @@ import {
   Component,
   Input,
   OnDestroy,
-  OnInit
+  OnInit,
 } from '@angular/core';
 import { BooleanInput } from '@angular/cdk/coercion';
 import { Subject, takeUntil } from 'rxjs';
@@ -15,7 +15,7 @@ import { FuseNavigationItem } from '@fuse/components/navigation/navigation.types
 @Component({
   selector: 'fuse-vertical-navigation-group-item',
   templateUrl: './group.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FuseVerticalNavigationGroupItemComponent
   implements OnInit, OnDestroy

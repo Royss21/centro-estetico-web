@@ -1,6 +1,13 @@
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import { ExtraOptions, PreloadAllModules, provideRouter, withInMemoryScrolling, withPreloading, withRouterConfig } from '@angular/router';
-import { appRoutes } from './app/app.routing'
+import {
+  ExtraOptions,
+  PreloadAllModules,
+  provideRouter,
+  withInMemoryScrolling,
+  withPreloading,
+  withRouterConfig,
+} from '@angular/router';
+import { appRoutes } from './app/app.routing';
 import { appConfig } from '@core/config/app.config';
 import { FuseConfigModule } from '@fuse/services/config';
 import { importProvidersFrom } from '@angular/core';
@@ -12,15 +19,12 @@ import { IconsModule } from '@core/icons/icons.module';
 
 const routerConfig: ExtraOptions = {
   preloadingStrategy: PreloadAllModules,
-  scrollPositionRestoration: 'enabled'
+  scrollPositionRestoration: 'enabled',
 };
 
 bootstrapApplication(AppComponent, {
-  providers:[
-    provideRouter(
-      appRoutes,
-      withInMemoryScrolling(routerConfig)
-    ),
+  providers: [
+    provideRouter(appRoutes, withInMemoryScrolling(routerConfig)),
     importProvidersFrom(
       BrowserAnimationsModule,
       BrowserModule,
@@ -30,6 +34,6 @@ bootstrapApplication(AppComponent, {
 
       IconsModule,
       HttpClientModule
-    )
-  ]
-}).catch(err => console.error(err));
+    ),
+  ],
+}).catch((err) => console.error(err));

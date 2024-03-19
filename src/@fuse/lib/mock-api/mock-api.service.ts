@@ -4,7 +4,7 @@ import { FuseMockApiHandler } from '@fuse/lib/mock-api/mock-api.request-handler'
 import { FuseMockApiMethods } from '@fuse/lib/mock-api/mock-api.types';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FuseMockApiService {
   private _handlers: { [key: string]: Map<string, FuseMockApiHandler> } = {
@@ -15,7 +15,7 @@ export class FuseMockApiService {
     put: new Map<string, FuseMockApiHandler>(),
     head: new Map<string, FuseMockApiHandler>(),
     jsonp: new Map<string, FuseMockApiHandler>(),
-    options: new Map<string, FuseMockApiHandler>()
+    options: new Map<string, FuseMockApiHandler>(),
   };
 
   /**
@@ -47,7 +47,7 @@ export class FuseMockApiService {
       urlParams: { [key: string]: string };
     } = {
       handler: undefined,
-      urlParams: {}
+      urlParams: {},
     };
 
     // Split the url

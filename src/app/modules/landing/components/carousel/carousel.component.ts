@@ -2,7 +2,14 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ICarouselItem } from '@modules/landing/components/carousel/interfaces';
 import { SharedModule } from '@shared/shared.module';
-import { Observable, Subject, interval, takeUntil, timeInterval, timer } from 'rxjs';
+import {
+  Observable,
+  Subject,
+  interval,
+  takeUntil,
+  timeInterval,
+  timer,
+} from 'rxjs';
 import { take, tap } from 'lodash';
 
 @Component({
@@ -28,8 +35,8 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-
-    this._timeInterval.pipe(takeUntil(this.destroyed$),timeInterval())
+    this._timeInterval
+      .pipe(takeUntil(this.destroyed$), timeInterval())
       .subscribe(() => this.setNext());
 
     this.items.map((item, i) => {
@@ -57,11 +64,11 @@ export class CarouselComponent implements OnInit, OnDestroy {
 
   setBack(): void {
     let finalPercentage = 0;
-    let backPosition = (this.currentPosition < 0 ? 1 : this.currentPosition) - 1;
+    let backPosition =
+      (this.currentPosition < 0 ? 1 : this.currentPosition) - 1;
 
-    if(backPosition >= 0)
-      finalPercentage = -100 * backPosition;
-    else{
+    if (backPosition >= 0) finalPercentage = -100 * backPosition;
+    else {
       finalPercentage = 100 * backPosition;
       backPosition = this.items.length - 1;
     }
@@ -69,7 +76,6 @@ export class CarouselComponent implements OnInit, OnDestroy {
     this.items.find((i) => i.id === 0).marginLeft = finalPercentage;
     this.currentPosition = backPosition;
   }
-
 
   ngOnDestroy() {
     this.destroyed$.next(null);

@@ -10,14 +10,14 @@ import {
   OnInit,
   Output,
   SimpleChanges,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import { filter, Subject, takeUntil } from 'rxjs';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 import { fuseAnimations } from '@fuse/animations';
 import {
   FuseAlertAppearance,
-  FuseAlertType
+  FuseAlertType,
 } from '@fuse/components/alert/alert.types';
 import { FuseAlertService } from '@fuse/components/alert/alert.service';
 import { FuseUtilsService } from '@fuse/services/utils/utils.service';
@@ -29,7 +29,7 @@ import { FuseUtilsService } from '@fuse/services/utils/utils.service';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: fuseAnimations,
-  exportAs: 'fuseAlert'
+  exportAs: 'fuseAlert',
 })
 export class FuseAlertComponent implements OnChanges, OnInit, OnDestroy {
   /* eslint-disable @typescript-eslint/naming-convention */
@@ -82,7 +82,7 @@ export class FuseAlertComponent implements OnChanges, OnInit, OnDestroy {
       'fuse-alert-type-info': this.type === 'info',
       'fuse-alert-type-success': this.type === 'success',
       'fuse-alert-type-warning': this.type === 'warning',
-      'fuse-alert-type-error': this.type === 'error'
+      'fuse-alert-type-error': this.type === 'error',
     };
     /* eslint-enable @typescript-eslint/naming-convention */
   }

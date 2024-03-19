@@ -5,6 +5,6 @@ import { FuseCardComponent } from '@fuse/components/card/card.component';
 @NgModule({
   declarations: [FuseCardComponent],
   imports: [CommonModule],
-  exports: [FuseCardComponent]
+  exports: [FuseCardComponent],
 })
 export class FuseCardModule {}

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { FuseUtilsService } from '@fuse/services/utils/utils.service';
 
 @NgModule({
-  providers: [FuseUtilsService]
+  providers: [FuseUtilsService],
 })
 export class FuseUtilsModule {
   /**

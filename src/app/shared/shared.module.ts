@@ -11,16 +11,16 @@ import { SharedMaterialModule } from './shared-material.module';
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
-    SharedMaterialModule
+    SharedMaterialModule,
   ],
   exports: [
     CommonModule,
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
-    SharedMaterialModule
+    SharedMaterialModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: []
+  providers: [],
 })
 export class SharedModule {}

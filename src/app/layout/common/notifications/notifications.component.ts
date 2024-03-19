@@ -7,14 +7,14 @@ import {
   TemplateRef,
   ViewChild,
   ViewContainerRef,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 import { MatButton } from '@angular/material/button';
 import { Subject, takeUntil } from 'rxjs';
 import { NotificationsService } from './notifications.service';
-import { Notification } from './notifications.types'
+import { Notification } from './notifications.types';
 import { RouterModule } from '@angular/router';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { PortalModule } from '@angular/cdk/portal';
@@ -37,18 +37,18 @@ import { SharedModule } from '@shared/shared.module';
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
-    SharedModule
-  ]
+    SharedModule,
+  ],
 })
 export class NotificationsComponent implements OnInit, OnDestroy {
   @ViewChild('notificationsOrigin') private _notificationsOrigin: MatButton;
   @ViewChild('notificationsPanel')
-  private _notificationsPanel: TemplateRef<any>;
+  private _notificationsPanel: TemplateRef<Element>;
 
   notifications: Notification[];
   unreadCount: number = 0;
   private _overlayRef: OverlayRef;
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<boolean> = new Subject<boolean>();
 
   /**
    * Constructor
@@ -157,8 +157,8 @@ export class NotificationsComponent implements OnInit, OnDestroy {
    * @param index
    * @param item
    */
-  trackByFn(index: number, item: any): any {
-    return item.id || index;
+  trackByFn(index: number, item: Notification): number {
+    return parseInt(item.id) || index;
   }
 
   // -----------------------------------------------------------------------------------------------------
@@ -186,27 +186,27 @@ export class NotificationsComponent implements OnInit, OnDestroy {
             originX: 'start',
             originY: 'bottom',
             overlayX: 'start',
-            overlayY: 'top'
+            overlayY: 'top',
           },
           {
             originX: 'start',
             originY: 'top',
             overlayX: 'start',
-            overlayY: 'bottom'
+            overlayY: 'bottom',
           },
           {
             originX: 'end',
             originY: 'bottom',
             overlayX: 'end',
-            overlayY: 'top'
+            overlayY: 'top',
           },
           {
             originX: 'end',
             originY: 'top',
             overlayX: 'end',
-            overlayY: 'bottom'
-          }
-        ])
+            overlayY: 'bottom',
+          },
+        ]),
     });
 
     // Detach the overlay from the portal on backdrop click

@@ -3,11 +3,11 @@ import {
   state,
   style,
   transition,
-  trigger
+  trigger,
 } from '@angular/animations';
 import {
   FuseAnimationCurves,
-  FuseAnimationDurations
+  FuseAnimationDurations,
 } from '@fuse/animations/defaults';
 
 // -----------------------------------------------------------------------------------------------------
@@ -17,14 +17,14 @@ const slideInTop = trigger('slideInTop', [
   state(
     'void',
     style({
-      transform: 'translate3d(0, -100%, 0)'
+      transform: 'translate3d(0, -100%, 0)',
     })
   ),
 
   state(
     '*',
     style({
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -34,9 +34,9 @@ const slideInTop = trigger('slideInTop', [
   // Transition
   transition('void => *', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -46,14 +46,14 @@ const slideInBottom = trigger('slideInBottom', [
   state(
     'void',
     style({
-      transform: 'translate3d(0, 100%, 0)'
+      transform: 'translate3d(0, 100%, 0)',
     })
   ),
 
   state(
     '*',
     style({
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -63,9 +63,9 @@ const slideInBottom = trigger('slideInBottom', [
   // Transition
   transition('void => *', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -75,14 +75,14 @@ const slideInLeft = trigger('slideInLeft', [
   state(
     'void',
     style({
-      transform: 'translate3d(-100%, 0, 0)'
+      transform: 'translate3d(-100%, 0, 0)',
     })
   ),
 
   state(
     '*',
     style({
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -92,9 +92,9 @@ const slideInLeft = trigger('slideInLeft', [
   // Transition
   transition('void => *', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -104,14 +104,14 @@ const slideInRight = trigger('slideInRight', [
   state(
     'void',
     style({
-      transform: 'translate3d(100%, 0, 0)'
+      transform: 'translate3d(100%, 0, 0)',
     })
   ),
 
   state(
     '*',
     style({
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -121,9 +121,9 @@ const slideInRight = trigger('slideInRight', [
   // Transition
   transition('void => *', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -133,14 +133,14 @@ const slideOutTop = trigger('slideOutTop', [
   state(
     '*',
     style({
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
   state(
     'void',
     style({
-      transform: 'translate3d(0, -100%, 0)'
+      transform: 'translate3d(0, -100%, 0)',
     })
   ),
 
@@ -150,9 +150,9 @@ const slideOutTop = trigger('slideOutTop', [
   // Transition
   transition('* => void', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -162,14 +162,14 @@ const slideOutBottom = trigger('slideOutBottom', [
   state(
     '*',
     style({
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
   state(
     'void',
     style({
-      transform: 'translate3d(0, 100%, 0)'
+      transform: 'translate3d(0, 100%, 0)',
     })
   ),
 
@@ -179,9 +179,9 @@ const slideOutBottom = trigger('slideOutBottom', [
   // Transition
   transition('* => void', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -191,14 +191,14 @@ const slideOutLeft = trigger('slideOutLeft', [
   state(
     '*',
     style({
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
   state(
     'void',
     style({
-      transform: 'translate3d(-100%, 0, 0)'
+      transform: 'translate3d(-100%, 0, 0)',
     })
   ),
 
@@ -208,9 +208,9 @@ const slideOutLeft = trigger('slideOutLeft', [
   // Transition
   transition('* => void', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -220,14 +220,14 @@ const slideOutRight = trigger('slideOutRight', [
   state(
     '*',
     style({
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
   state(
     'void',
     style({
-      transform: 'translate3d(100%, 0, 0)'
+      transform: 'translate3d(100%, 0, 0)',
     })
   ),
 
@@ -237,9 +237,9 @@ const slideOutRight = trigger('slideOutRight', [
   // Transition
   transition('* => void', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`,
+    },
+  }),
 ]);
 
 export {
@@ -250,5 +250,5 @@ export {
   slideOutTop,
   slideOutBottom,
   slideOutLeft,
-  slideOutRight
+  slideOutRight,
 };

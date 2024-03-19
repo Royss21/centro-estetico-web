@@ -7,7 +7,7 @@ export class FuseValidators {
    * @param value
    */
   static isEmptyInputValue(value: any): boolean {
-    return value == null || value.length === 0;
+    return value === null || value.length === 0;
   }
 
   /**

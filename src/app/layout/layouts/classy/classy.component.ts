@@ -55,7 +55,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
   isScreenSmall: boolean = false;
   navigation: Navigation;
   user: User;
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<boolean> = new Subject<boolean>();
 
   @ViewChild('bannerHeader', { static: false })
   bannerHeader: ElementRef<HTMLDivElement>;
@@ -173,7 +173,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
     //     this.navigation = navigation;
     //   });
 
-    var user: User = {
+    const user: User = {
       id: 'cfaad35d-07a3-4447-a6c3-d8c3d54fd5df',
       name: 'Brian Hughes',
       email: 'hughes.brian@company.com',
@@ -235,21 +235,34 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
 
   @HostListener('document:scroll', ['$event'])
   public onViewportScroll() {
-
     if (this.bannerHeader && !this.isScreenSmall) {
-      this.bannerHeaderMovile.nativeElement.classList.remove('fixed-banner-movile');
+      this.bannerHeaderMovile.nativeElement.classList.remove(
+        'fixed-banner-movile'
+      );
       if (window.scrollY >= 100)
-        this.bannerHeader.nativeElement.classList.add('fixed','top-0','w-full');
+        this.bannerHeader.nativeElement.classList.add(
+          'fixed',
+          'top-0',
+          'w-full'
+        );
       else
-        this.bannerHeader.nativeElement.classList.remove('fixed','top-0','w-full');
+        this.bannerHeader.nativeElement.classList.remove(
+          'fixed',
+          'top-0',
+          'w-full'
+        );
     }
 
     if (this.bannerHeaderMovile && this.isScreenSmall) {
       if (window.scrollY >= 50) {
-        this.bannerHeaderMovile.nativeElement.classList.add('fixed-banner-movile');
+        this.bannerHeaderMovile.nativeElement.classList.add(
+          'fixed-banner-movile'
+        );
         this.bannerHeaderMovile.nativeElement.classList.remove('relative');
       } else {
-        this.bannerHeaderMovile.nativeElement.classList.remove('fixed-banner-movile');
+        this.bannerHeaderMovile.nativeElement.classList.remove(
+          'fixed-banner-movile'
+        );
         this.bannerHeaderMovile.nativeElement.classList.add('relative');
       }
     }

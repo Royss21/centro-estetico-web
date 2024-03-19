@@ -3,11 +3,11 @@ import {
   state,
   style,
   transition,
-  trigger
+  trigger,
 } from '@angular/animations';
 import {
   FuseAnimationCurves,
-  FuseAnimationDurations
+  FuseAnimationDurations,
 } from '@fuse/animations/defaults';
 
 // -----------------------------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ const zoomIn = trigger('zoomIn', [
     'void',
     style({
       opacity: 0,
-      transform: 'scale(0.5)'
+      transform: 'scale(0.5)',
     })
   ),
 
@@ -26,7 +26,7 @@ const zoomIn = trigger('zoomIn', [
     '*',
     style({
       opacity: 1,
-      transform: 'scale(1)'
+      transform: 'scale(1)',
     })
   ),
 
@@ -36,9 +36,9 @@ const zoomIn = trigger('zoomIn', [
   // Transition
   transition('void => *', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -49,7 +49,7 @@ const zoomOut = trigger('zoomOut', [
     '*',
     style({
       opacity: 1,
-      transform: 'scale(1)'
+      transform: 'scale(1)',
     })
   ),
 
@@ -57,7 +57,7 @@ const zoomOut = trigger('zoomOut', [
     'void',
     style({
       opacity: 0,
-      transform: 'scale(0.5)'
+      transform: 'scale(0.5)',
     })
   ),
 
@@ -67,9 +67,9 @@ const zoomOut = trigger('zoomOut', [
   // Transition
   transition('* => void', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`,
+    },
+  }),
 ]);
 
 export { zoomIn, zoomOut };

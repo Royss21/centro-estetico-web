@@ -5,12 +5,12 @@ import {
   Input,
   OnInit,
   TemplateRef,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import {
   FSDocument,
-  FSDocumentElement
+  FSDocumentElement,
 } from '@fuse/components/fullscreen/fullscreen.types';
 
 @Component({
@@ -18,7 +18,7 @@ import {
   templateUrl: './fullscreen.component.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  exportAs: 'fuseFullscreen'
+  exportAs: 'fuseFullscreen',
 })
 export class FuseFullscreenComponent implements OnInit {
   @Input() iconTpl: TemplateRef<any>;

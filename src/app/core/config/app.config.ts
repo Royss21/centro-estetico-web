@@ -38,33 +38,33 @@ export const appConfig: AppConfig = {
     sm: '600px',
     md: '960px',
     lg: '1280px',
-    xl: '1440px'
+    xl: '1440px',
   },
   theme: 'theme-default',
   themes: [
     {
       id: 'theme-default',
-      name: 'Default'
+      name: 'Default',
     },
     {
       id: 'theme-brand',
-      name: 'Brand'
+      name: 'Brand',
     },
     {
       id: 'theme-teal',
-      name: 'Teal'
+      name: 'Teal',
     },
     {
       id: 'theme-rose',
-      name: 'Rose'
+      name: 'Rose',
     },
     {
       id: 'theme-purple',
-      name: 'Purple'
+      name: 'Purple',
     },
     {
       id: 'theme-amber',
-      name: 'Amber'
-    }
-  ]
+      name: 'Amber',
+    },
+  ],
 };

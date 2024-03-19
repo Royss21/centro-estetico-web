@@ -4,7 +4,7 @@ import {
   Component,
   Input,
   OnDestroy,
-  OnInit
+  OnInit,
 } from '@angular/core';
 import { IsActiveMatchOptions } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
@@ -16,7 +16,7 @@ import { FuseUtilsService } from '@fuse/services/utils/utils.service';
 @Component({
   selector: 'fuse-horizontal-navigation-basic-item',
   templateUrl: './basic.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FuseHorizontalNavigationBasicItemComponent
   implements OnInit, OnDestroy

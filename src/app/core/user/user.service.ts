@@ -4,7 +4,7 @@ import { map, Observable, ReplaySubject, tap } from 'rxjs';
 import { User } from './user.types';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
   private _user: ReplaySubject<User> = new ReplaySubject<User>(1);
@@ -52,7 +52,7 @@ export class UserService {
    *
    * @param user
    */
-  update(user: User): Observable<any> {
+  update(user: User): Observable<void> {
     return this._httpClient.patch<User>('api/common/user', { user }).pipe(
       map((response) => {
         this._user.next(response);

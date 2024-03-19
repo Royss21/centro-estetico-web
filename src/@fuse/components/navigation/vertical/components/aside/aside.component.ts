@@ -6,7 +6,7 @@ import {
   OnChanges,
   OnDestroy,
   OnInit,
-  SimpleChanges
+  SimpleChanges,
 } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { BooleanInput } from '@angular/cdk/coercion';
@@ -18,7 +18,7 @@ import { FuseNavigationItem } from '@fuse/components/navigation/navigation.types
 @Component({
   selector: 'fuse-vertical-navigation-aside-item',
   templateUrl: './aside.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FuseVerticalNavigationAsideItemComponent
   implements OnChanges, OnInit, OnDestroy

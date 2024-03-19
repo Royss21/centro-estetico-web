@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Platform } from '@angular/cdk/platform';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FusePlatformService {
   osName = 'os-unknown';

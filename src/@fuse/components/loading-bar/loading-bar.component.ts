@@ -5,7 +5,7 @@ import {
   OnDestroy,
   OnInit,
   SimpleChanges,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Subject, takeUntil } from 'rxjs';
@@ -16,7 +16,7 @@ import { FuseLoadingService } from '@fuse/services/loading';
   templateUrl: './loading-bar.component.html',
   styleUrls: ['./loading-bar.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  exportAs: 'fuseLoadingBar'
+  exportAs: 'fuseLoadingBar',
 })
 export class FuseLoadingBarComponent implements OnChanges, OnInit, OnDestroy {
   @Input() autoMode: boolean = true;

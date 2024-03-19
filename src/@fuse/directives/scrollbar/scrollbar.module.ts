@@ -3,6 +3,6 @@ import { FuseScrollbarDirective } from '@fuse/directives/scrollbar/scrollbar.dir
 
 @NgModule({
   declarations: [FuseScrollbarDirective],
-  exports: [FuseScrollbarDirective]
+  exports: [FuseScrollbarDirective],
 })
 export class FuseScrollbarModule {}

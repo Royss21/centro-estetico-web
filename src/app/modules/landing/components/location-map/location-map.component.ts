@@ -6,8 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './location-map.component.html',
-  styleUrls: ['./location-map.component.scss']
+  styleUrls: ['./location-map.component.scss'],
 })
-export class LocationMapComponent {
-
-}
+export class LocationMapComponent {}

@@ -9,7 +9,7 @@ import {
   fadeOutBottom,
   fadeOutLeft,
   fadeOutRight,
-  fadeOutTop
+  fadeOutTop,
 } from '@fuse/animations/fade';
 import { shake } from '@fuse/animations/shake';
 import {
@@ -20,7 +20,7 @@ import {
   slideOutBottom,
   slideOutLeft,
   slideOutRight,
-  slideOutTop
+  slideOutTop,
 } from '@fuse/animations/slide';
 import { zoomIn, zoomOut } from '@fuse/animations/zoom';
 
@@ -46,5 +46,5 @@ export const fuseAnimations = [
   slideOutLeft,
   slideOutRight,
   zoomIn,
-  zoomOut
+  zoomOut,
 ];

@@ -41,7 +41,7 @@ export class FuseMockApiHandler {
     // Execute the reply callback
     const replyResult = this._reply({
       request: this.request,
-      urlParams: this.urlParams
+      urlParams: this.urlParams,
     });
 
     // If the result of the reply callback is an observable...

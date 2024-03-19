@@ -12,20 +12,20 @@ export class FuseConfirmationService {
     icon: {
       show: true,
       name: 'heroicons_outline:exclamation',
-      color: 'warn'
+      color: 'warn',
     },
     actions: {
       confirm: {
         show: true,
         label: 'Confirm',
-        color: 'warn'
+        color: 'warn',
       },
       cancel: {
         show: true,
-        label: 'Cancel'
-      }
+        label: 'Cancel',
+      },
     },
-    dismissible: false
+    dismissible: false,
   };
 
   /**
@@ -48,7 +48,7 @@ export class FuseConfirmationService {
       autoFocus: false,
       disableClose: !userConfig.dismissible,
       data: userConfig,
-      panelClass: 'fuse-confirmation-dialog-panel'
+      panelClass: 'fuse-confirmation-dialog-panel',
     });
   }
 }

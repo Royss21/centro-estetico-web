@@ -20,9 +20,9 @@ export class FuseConfigModule {
       providers: [
         {
           provide: FUSE_APP_CONFIG,
-          useValue: config
-        }
-      ]
+          useValue: config,
+        },
+      ],
     };
   }
 }

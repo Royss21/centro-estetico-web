@@ -15,7 +15,7 @@ import { FuseUtilsModule } from '@fuse/services/utils/utils.module';
     FuseMediaWatcherModule,
     FusePlatformModule,
     FuseSplashScreenModule,
-    FuseUtilsModule
+    FuseUtilsModule,
   ],
   providers: [
     {
@@ -24,17 +24,17 @@ import { FuseUtilsModule } from '@fuse/services/utils/utils.module';
       useValue: {
         doctype: true,
         theme: false,
-        version: true
-      }
+        version: true,
+      },
     },
     {
       // Use the 'fill' appearance on Angular Material form fields by default
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: {
-        appearance: 'fill'
-      }
-    }
-  ]
+        appearance: 'fill',
+      },
+    },
+  ],
 })
 export class FuseModule {
   /**

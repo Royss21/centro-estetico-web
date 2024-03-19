@@ -5,7 +5,7 @@ import {
   HostBinding,
   Input,
   OnDestroy,
-  OnInit
+  OnInit,
 } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { BooleanInput } from '@angular/cdk/coercion';
@@ -19,7 +19,7 @@ import { FuseNavigationItem } from '@fuse/components/navigation/navigation.types
   selector: 'fuse-vertical-navigation-collapsable-item',
   templateUrl: './collapsable.component.html',
   animations: fuseAnimations,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FuseVerticalNavigationCollapsableItemComponent
   implements OnInit, OnDestroy
@@ -57,7 +57,7 @@ export class FuseVerticalNavigationCollapsableItemComponent
     /* eslint-disable @typescript-eslint/naming-convention */
     return {
       'fuse-vertical-navigation-item-collapsed': this.isCollapsed,
-      'fuse-vertical-navigation-item-expanded': this.isExpanded
+      'fuse-vertical-navigation-item-expanded': this.isExpanded,
     };
     /* eslint-enable @typescript-eslint/naming-convention */
   }

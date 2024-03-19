@@ -4,7 +4,7 @@ import { filter, Subject, takeUntil } from 'rxjs';
 
 @Directive({
   selector: '[fuseScrollReset]',
-  exportAs: 'fuseScrollReset'
+  exportAs: 'fuseScrollReset',
 })
 export class FuseScrollResetDirective implements OnInit, OnDestroy {
   private _unsubscribeAll: Subject<any> = new Subject<any>();

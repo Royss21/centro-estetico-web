@@ -4,7 +4,7 @@ import {
   OnDestroy,
   OnInit,
   Renderer2,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
@@ -24,25 +24,21 @@ import { EmptyLayoutComponent } from './layouts/empty/empty.component';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  imports:[
-    ClassyLayoutComponent,
-    EmptyLayoutComponent,
-    CommonModule
-  ]
+  imports: [ClassyLayoutComponent, EmptyLayoutComponent, CommonModule],
 })
 export class LayoutComponent implements OnInit, OnDestroy {
   config: AppConfig;
   layout: Layout;
   scheme: 'dark' | 'light';
   theme: string;
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<boolean> = new Subject<boolean>();
 
   /**
    * Constructor
    */
   constructor(
     private _activatedRoute: ActivatedRoute,
-    @Inject(DOCUMENT) private _document: any,
+    @Inject(DOCUMENT) private _document: Document,
     private _renderer2: Renderer2,
     private _router: Router,
     private _fuseConfigService: FuseConfigService,
@@ -63,15 +59,15 @@ export class LayoutComponent implements OnInit, OnDestroy {
       this._fuseConfigService.config$,
       this._fuseMediaWatcherService.onMediaQueryChange$([
         '(prefers-color-scheme: dark)',
-        '(prefers-color-scheme: light)'
-      ])
+        '(prefers-color-scheme: light)',
+      ]),
     ])
       .pipe(
         takeUntil(this._unsubscribeAll),
         map(([config, mql]) => {
           const options = {
             scheme: config.scheme,
-            theme: config.theme
+            theme: config.theme,
           };
 
           // If the scheme is set to 'auto'...

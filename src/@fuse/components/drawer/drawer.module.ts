@@ -5,6 +5,6 @@ import { FuseDrawerComponent } from '@fuse/components/drawer/drawer.component';
 @NgModule({
   declarations: [FuseDrawerComponent],
   imports: [CommonModule],
-  exports: [FuseDrawerComponent]
+  exports: [FuseDrawerComponent],
 })
 export class FuseDrawerModule {}

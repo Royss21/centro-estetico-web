@@ -3,6 +3,6 @@ import { FuseScrollResetDirective } from '@fuse/directives/scroll-reset/scroll-r
 
 @NgModule({
   declarations: [FuseScrollResetDirective],
-  exports: [FuseScrollResetDirective]
+  exports: [FuseScrollResetDirective],
 })
 export class FuseScrollResetModule {}

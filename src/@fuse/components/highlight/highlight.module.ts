@@ -5,6 +5,6 @@ import { FuseHighlightComponent } from '@fuse/components/highlight/highlight.com
 @NgModule({
   declarations: [FuseHighlightComponent],
   imports: [CommonModule],
-  exports: [FuseHighlightComponent]
+  exports: [FuseHighlightComponent],
 })
 export class FuseHighlightModule {}

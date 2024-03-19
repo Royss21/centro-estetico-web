@@ -5,7 +5,7 @@ import {
   OnChanges,
   OnDestroy,
   OnInit,
-  SimpleChanges
+  SimpleChanges,
 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
@@ -15,7 +15,7 @@ import PerfectScrollbar from 'perfect-scrollbar';
 import { merge } from 'lodash-es';
 import {
   ScrollbarGeometry,
-  ScrollbarPosition
+  ScrollbarPosition,
 } from '@fuse/directives/scrollbar/scrollbar.types';
 
 /**
@@ -23,7 +23,7 @@ import {
  */
 @Directive({
   selector: '[fuseScrollbar]',
-  exportAs: 'fuseScrollbar'
+  exportAs: 'fuseScrollbar',
 })
 export class FuseScrollbarDirective implements OnChanges, OnInit, OnDestroy {
   /* eslint-disable @typescript-eslint/naming-convention */
@@ -406,7 +406,7 @@ export class FuseScrollbarDirective implements OnChanges, OnInit, OnDestroy {
 
     // Initialize the PerfectScrollbar
     this._ps = new PerfectScrollbar(this._elementRef.nativeElement, {
-      ...this._options
+      ...this._options,
     });
   }
 

@@ -9,19 +9,14 @@ import { Subject } from 'rxjs';
   selector: 'empty-layout',
   templateUrl: './empty.component.html',
   encapsulation: ViewEncapsulation.None,
-  imports: [
-    RouterModule,
-    FuseLoadingBarModule,
-    SharedModule
-  ],
+  imports: [RouterModule, FuseLoadingBarModule, SharedModule],
 })
 export class EmptyLayoutComponent implements OnDestroy {
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<boolean> = new Subject<boolean>();
 
   /**
    * Constructor
    */
-  constructor() {}
 
   // -----------------------------------------------------------------------------------------------------
   // @ Lifecycle hooks

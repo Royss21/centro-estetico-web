@@ -5,7 +5,7 @@ import {
   OnChanges,
   SimpleChanges,
   TemplateRef,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import { fuseAnimations } from '@fuse/animations';
 import { FuseMediaWatcherService } from '@fuse/services/media-watcher';
@@ -15,7 +15,7 @@ import { FuseMediaWatcherService } from '@fuse/services/media-watcher';
   templateUrl: './masonry.component.html',
   encapsulation: ViewEncapsulation.None,
   animations: fuseAnimations,
-  exportAs: 'fuseMasonry'
+  exportAs: 'fuseMasonry',
 })
 export class FuseMasonryComponent implements OnChanges, AfterViewInit {
   @Input() columnsTemplate: TemplateRef<any>;
@@ -75,7 +75,7 @@ export class FuseMasonryComponent implements OnChanges, AfterViewInit {
 
     // Prepare the distributed columns array
     this.distributedColumns = Array.from(Array(this.columns), (item) => ({
-      items: []
+      items: [],
     }));
 
     // Distribute the items to columns

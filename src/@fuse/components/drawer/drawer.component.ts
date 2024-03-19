@@ -11,17 +11,17 @@ import {
   Output,
   Renderer2,
   SimpleChanges,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import {
   animate,
   AnimationBuilder,
   AnimationPlayer,
-  style
+  style,
 } from '@angular/animations';
 import {
   FuseDrawerMode,
-  FuseDrawerPosition
+  FuseDrawerPosition,
 } from '@fuse/components/drawer/drawer.types';
 import { FuseDrawerService } from '@fuse/components/drawer/drawer.service';
 import { FuseUtilsService } from '@fuse/services/utils/utils.service';
@@ -32,7 +32,7 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
   templateUrl: './drawer.component.html',
   styleUrls: ['./drawer.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  exportAs: 'fuseDrawer'
+  exportAs: 'fuseDrawer',
 })
 export class FuseDrawerComponent implements OnChanges, OnInit, OnDestroy {
   /* eslint-disable @typescript-eslint/naming-convention */
@@ -92,7 +92,7 @@ export class FuseDrawerComponent implements OnChanges, OnInit, OnDestroy {
       'fuse-drawer-hover': this._hovered,
       [`fuse-drawer-mode-${this.mode}`]: true,
       'fuse-drawer-opened': this.opened,
-      [`fuse-drawer-position-${this.position}`]: true
+      [`fuse-drawer-position-${this.position}`]: true,
     };
     /* eslint-enable @typescript-eslint/naming-convention */
   }
@@ -102,7 +102,7 @@ export class FuseDrawerComponent implements OnChanges, OnInit, OnDestroy {
    */
   @HostBinding('style') get styleList(): any {
     return {
-      visibility: this.opened ? 'visible' : 'hidden'
+      visibility: this.opened ? 'visible' : 'hidden',
     };
   }
 
@@ -328,7 +328,10 @@ export class FuseDrawerComponent implements OnChanges, OnInit, OnDestroy {
     this._player = this._animationBuilder
       .build([
         style({ opacity: 0 }),
-        animate('300ms cubic-bezier(0.25, 0.8, 0.25, 1)', style({ opacity: 1 }))
+        animate(
+          '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
+          style({ opacity: 1 })
+        ),
       ])
       .create(this._overlay);
 
@@ -350,7 +353,10 @@ export class FuseDrawerComponent implements OnChanges, OnInit, OnDestroy {
     // Create the leave animation and attach it to the player
     this._player = this._animationBuilder
       .build([
-        animate('300ms cubic-bezier(0.25, 0.8, 0.25, 1)', style({ opacity: 0 }))
+        animate(
+          '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
+          style({ opacity: 0 })
+        ),
       ])
       .create(this._overlay);
 

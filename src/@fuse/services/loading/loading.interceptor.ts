@@ -3,7 +3,7 @@ import {
   HttpEvent,
   HttpHandler,
   HttpInterceptor,
-  HttpRequest
+  HttpRequest,
 } from '@angular/common/http';
 import { finalize, Observable } from 'rxjs';
 import { FuseLoadingService } from '@fuse/services/loading/loading.service';

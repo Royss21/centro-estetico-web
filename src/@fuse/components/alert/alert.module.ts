@@ -7,6 +7,6 @@ import { FuseAlertComponent } from '@fuse/components/alert/alert.component';
 @NgModule({
   declarations: [FuseAlertComponent],
   imports: [CommonModule, MatButtonModule, MatIconModule],
-  exports: [FuseAlertComponent]
+  exports: [FuseAlertComponent],
 })
 export class FuseAlertModule {}

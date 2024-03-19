@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { IsActiveMatchOptions } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FuseUtilsService {
   // -----------------------------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ export class FuseUtilsService {
       paths: 'exact',
       fragment: 'ignored',
       matrixParams: 'ignored',
-      queryParams: 'exact'
+      queryParams: 'exact',
     };
   }
 
@@ -29,7 +29,7 @@ export class FuseUtilsService {
       paths: 'subset',
       fragment: 'ignored',
       matrixParams: 'ignored',
-      queryParams: 'subset'
+      queryParams: 'subset',
     };
   }
 

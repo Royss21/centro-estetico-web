@@ -3,11 +3,11 @@ import {
   state,
   style,
   transition,
-  trigger
+  trigger,
 } from '@angular/animations';
 import {
   FuseAnimationCurves,
-  FuseAnimationDurations
+  FuseAnimationDurations,
 } from '@fuse/animations/defaults';
 
 // -----------------------------------------------------------------------------------------------------
@@ -17,14 +17,14 @@ const fadeIn = trigger('fadeIn', [
   state(
     'void',
     style({
-      opacity: 0
+      opacity: 0,
     })
   ),
 
   state(
     '*',
     style({
-      opacity: 1
+      opacity: 1,
     })
   ),
 
@@ -34,9 +34,9 @@ const fadeIn = trigger('fadeIn', [
   // Transition
   transition('void => *', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -47,7 +47,7 @@ const fadeInTop = trigger('fadeInTop', [
     'void',
     style({
       opacity: 0,
-      transform: 'translate3d(0, -100%, 0)'
+      transform: 'translate3d(0, -100%, 0)',
     })
   ),
 
@@ -55,7 +55,7 @@ const fadeInTop = trigger('fadeInTop', [
     '*',
     style({
       opacity: 1,
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -65,9 +65,9 @@ const fadeInTop = trigger('fadeInTop', [
   // Transition
   transition('void => *', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -78,7 +78,7 @@ const fadeInBottom = trigger('fadeInBottom', [
     'void',
     style({
       opacity: 0,
-      transform: 'translate3d(0, 100%, 0)'
+      transform: 'translate3d(0, 100%, 0)',
     })
   ),
 
@@ -86,7 +86,7 @@ const fadeInBottom = trigger('fadeInBottom', [
     '*',
     style({
       opacity: 1,
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -96,9 +96,9 @@ const fadeInBottom = trigger('fadeInBottom', [
   // Transition
   transition('void => *', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -109,7 +109,7 @@ const fadeInLeft = trigger('fadeInLeft', [
     'void',
     style({
       opacity: 0,
-      transform: 'translate3d(-100%, 0, 0)'
+      transform: 'translate3d(-100%, 0, 0)',
     })
   ),
 
@@ -117,7 +117,7 @@ const fadeInLeft = trigger('fadeInLeft', [
     '*',
     style({
       opacity: 1,
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -127,9 +127,9 @@ const fadeInLeft = trigger('fadeInLeft', [
   // Transition
   transition('void => *', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -140,7 +140,7 @@ const fadeInRight = trigger('fadeInRight', [
     'void',
     style({
       opacity: 0,
-      transform: 'translate3d(100%, 0, 0)'
+      transform: 'translate3d(100%, 0, 0)',
     })
   ),
 
@@ -148,7 +148,7 @@ const fadeInRight = trigger('fadeInRight', [
     '*',
     style({
       opacity: 1,
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -158,9 +158,9 @@ const fadeInRight = trigger('fadeInRight', [
   // Transition
   transition('void => *', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -170,14 +170,14 @@ const fadeOut = trigger('fadeOut', [
   state(
     '*',
     style({
-      opacity: 1
+      opacity: 1,
     })
   ),
 
   state(
     'void',
     style({
-      opacity: 0
+      opacity: 0,
     })
   ),
 
@@ -187,9 +187,9 @@ const fadeOut = trigger('fadeOut', [
   // Transition
   transition('* => void', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -200,7 +200,7 @@ const fadeOutTop = trigger('fadeOutTop', [
     '*',
     style({
       opacity: 1,
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -208,7 +208,7 @@ const fadeOutTop = trigger('fadeOutTop', [
     'void',
     style({
       opacity: 0,
-      transform: 'translate3d(0, -100%, 0)'
+      transform: 'translate3d(0, -100%, 0)',
     })
   ),
 
@@ -218,9 +218,9 @@ const fadeOutTop = trigger('fadeOutTop', [
   // Transition
   transition('* => void', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -231,7 +231,7 @@ const fadeOutBottom = trigger('fadeOutBottom', [
     '*',
     style({
       opacity: 1,
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -239,7 +239,7 @@ const fadeOutBottom = trigger('fadeOutBottom', [
     'void',
     style({
       opacity: 0,
-      transform: 'translate3d(0, 100%, 0)'
+      transform: 'translate3d(0, 100%, 0)',
     })
   ),
 
@@ -249,9 +249,9 @@ const fadeOutBottom = trigger('fadeOutBottom', [
   // Transition
   transition('* => void', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -262,7 +262,7 @@ const fadeOutLeft = trigger('fadeOutLeft', [
     '*',
     style({
       opacity: 1,
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -270,7 +270,7 @@ const fadeOutLeft = trigger('fadeOutLeft', [
     'void',
     style({
       opacity: 0,
-      transform: 'translate3d(-100%, 0, 0)'
+      transform: 'translate3d(-100%, 0, 0)',
     })
   ),
 
@@ -280,9 +280,9 @@ const fadeOutLeft = trigger('fadeOutLeft', [
   // Transition
   transition('* => void', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`,
+    },
+  }),
 ]);
 
 // -----------------------------------------------------------------------------------------------------
@@ -293,7 +293,7 @@ const fadeOutRight = trigger('fadeOutRight', [
     '*',
     style({
       opacity: 1,
-      transform: 'translate3d(0, 0, 0)'
+      transform: 'translate3d(0, 0, 0)',
     })
   ),
 
@@ -301,7 +301,7 @@ const fadeOutRight = trigger('fadeOutRight', [
     'void',
     style({
       opacity: 0,
-      transform: 'translate3d(100%, 0, 0)'
+      transform: 'translate3d(100%, 0, 0)',
     })
   ),
 
@@ -311,9 +311,9 @@ const fadeOutRight = trigger('fadeOutRight', [
   // Transition
   transition('* => void', animate('{{timings}}'), {
     params: {
-      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
-    }
-  })
+      timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`,
+    },
+  }),
 ]);
 
 export {
@@ -326,5 +326,5 @@ export {
   fadeOutTop,
   fadeOutBottom,
   fadeOutLeft,
-  fadeOutRight
+  fadeOutRight,
 };

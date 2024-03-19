@@ -5,6 +5,6 @@ import { FuseMasonryComponent } from '@fuse/components/masonry/masonry.component
 @NgModule({
   declarations: [FuseMasonryComponent],
   imports: [CommonModule],
-  exports: [FuseMasonryComponent]
+  exports: [FuseMasonryComponent],
 })
 export class FuseMasonryModule {}

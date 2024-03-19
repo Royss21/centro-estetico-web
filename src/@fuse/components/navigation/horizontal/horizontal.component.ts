@@ -7,7 +7,7 @@ import {
   OnDestroy,
   OnInit,
   SimpleChanges,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import { ReplaySubject, Subject } from 'rxjs';
 import { fuseAnimations } from '@fuse/animations';
@@ -22,7 +22,7 @@ import { FuseUtilsService } from '@fuse/services/utils/utils.service';
   animations: fuseAnimations,
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  exportAs: 'fuseHorizontalNavigation'
+  exportAs: 'fuseHorizontalNavigation',
 })
 export class FuseHorizontalNavigationComponent
   implements OnChanges, OnInit, OnDestroy

@@ -26,7 +26,7 @@ export class FuseMediaWatcherService {
           fromPairs(
             Object.entries(config.screens).map(([alias, screen]) => [
               alias,
-              `(min-width: ${screen})`
+              `(min-width: ${screen})`,
             ])
           )
         ),
@@ -58,7 +58,7 @@ export class FuseMediaWatcherService {
               // Execute the observable
               this._onMediaChange.next({
                 matchingAliases,
-                matchingQueries
+                matchingQueries,
               });
             })
           )

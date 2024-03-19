@@ -4,7 +4,7 @@ import {
   Component,
   Input,
   OnDestroy,
-  OnInit
+  OnInit,
 } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { FuseHorizontalNavigationComponent } from '@fuse/components/navigation/horizontal/horizontal.component';
@@ -14,7 +14,7 @@ import { FuseNavigationItem } from '@fuse/components/navigation/navigation.types
 @Component({
   selector: 'fuse-horizontal-navigation-spacer-item',
   templateUrl: './spacer.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FuseHorizontalNavigationSpacerItemComponent
   implements OnInit, OnDestroy

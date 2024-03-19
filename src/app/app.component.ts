@@ -5,14 +5,9 @@ import { SharedModule } from '@shared/shared.module';
 @Component({
   standalone: true,
   selector: 'app-root',
-  styleUrls  : ['./app.component.scss'],
+  styleUrls: ['./app.component.scss'],
   templateUrl: './app.component.html',
-  imports:[
-    SharedModule,
-    LayoutComponent
-  ],
+  imports: [SharedModule, LayoutComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppComponent {
-
-}
+export class AppComponent {}

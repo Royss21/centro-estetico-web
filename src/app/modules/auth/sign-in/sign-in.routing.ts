@@ -4,7 +4,7 @@ import { AuthSignInComponent } from './sign-in.component';
 export default [
   {
     path: '',
-    component: AuthSignInComponent
+    component: AuthSignInComponent,
     //loadComponent: () => import('./sign-in.component').then(m => m.AuthSignInComponent)
-  }
+  },
 ] as Routes;

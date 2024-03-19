@@ -13,7 +13,7 @@ import {
   TemplateRef,
   ViewChild,
   ViewContainerRef,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { FuseHighlightService } from '@fuse/components/highlight/highlight.service';
@@ -24,7 +24,7 @@ import { FuseHighlightService } from '@fuse/components/highlight/highlight.servi
   styleUrls: ['./highlight.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  exportAs: 'fuseHighlight'
+  exportAs: 'fuseHighlight',
 })
 export class FuseHighlightComponent implements OnChanges, AfterViewInit {
   @Input() code: string;
@@ -120,7 +120,7 @@ export class FuseHighlightComponent implements OnChanges, AfterViewInit {
       this.templateRef,
       {
         highlightedCode: this.highlightedCode,
-        lang: this.lang
+        lang: this.lang,
       }
     );
 

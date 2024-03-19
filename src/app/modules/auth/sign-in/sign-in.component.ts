@@ -3,7 +3,7 @@ import {
   UntypedFormBuilder,
   UntypedFormGroup,
   NgForm,
-  Validators
+  Validators,
 } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { fuseAnimations } from '@fuse/animations';
@@ -18,18 +18,14 @@ import { of } from 'rxjs';
   templateUrl: './sign-in.component.html',
   encapsulation: ViewEncapsulation.None,
   animations: fuseAnimations,
-  imports:[
-    FuseCardModule,
-    FuseAlertModule,
-    SharedModule
-  ]
+  imports: [FuseCardModule, FuseAlertModule, SharedModule],
 })
 export class AuthSignInComponent implements OnInit {
   @ViewChild('signInNgForm') signInNgForm: NgForm;
 
   alert: { type: FuseAlertType; message: string } = {
     type: 'success',
-    message: ''
+    message: '',
   };
   signInForm: UntypedFormGroup;
   showAlert: boolean = false;
@@ -56,10 +52,10 @@ export class AuthSignInComponent implements OnInit {
     this.signInForm = this._formBuilder.group({
       email: [
         'hughes.brian@company.com',
-        [Validators.required, Validators.email]
+        [Validators.required, Validators.email],
       ],
       password: ['admin', Validators.required],
-      rememberMe: ['']
+      rememberMe: [''],
     });
   }
 
@@ -105,7 +101,7 @@ export class AuthSignInComponent implements OnInit {
         // Set the alert
         this.alert = {
           type: 'error',
-          message: 'Wrong email or password'
+          message: 'Wrong email or password',
         };
 
         // Show the alert
