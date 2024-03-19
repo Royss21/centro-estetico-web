@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+}
+
+::ng-deep {
+
+  .fuse-horizontal-navigation-item-title {
+    span {
+      font-size: 15px !important;
+    }
+  }
+
+  .fixed-banner-movile {
+    position: fixed !important;
+    top: 0 !important;
+  }
+}
