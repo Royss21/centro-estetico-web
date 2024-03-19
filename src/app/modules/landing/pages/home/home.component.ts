@@ -17,7 +17,6 @@ import { SharedModule } from '@shared/shared.module';
 })
 export class HomeComponent {
 
-
   carouselItems: ICarouselItem[] = [
     {
       id:0,
@@ -30,5 +29,4 @@ export class HomeComponent {
       subtitle: 'aqui va el contenido'
     }
   ]
-
 }
